@@ -1,0 +1,51 @@
+/* Factor A */
+@font-face {
+	font-family: 'Factor A';
+	src: local('Factor A Light Regular'), local('FactorALight-Regular'),
+		url('#{$path-fonts}/FactorA/FactorALight-Regular.woff2') format('woff2'),
+		url('#{$path-fonts}/FactorA/FactorALight-Regular.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Factor A';
+	src: local('Factor A Regular'), local('FactorA-Regular'),
+		url('#{$path-fonts}/FactorA/FactorA-Regular.woff2') format('woff2'),
+		url('#{$path-fonts}/FactorA/FactorA-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Factor A';
+	src: local('Factor A Medium Regular'), local('FactorAMedium-Regular'),
+		url('#{$path-fonts}/FactorA/FactorAMedium-Regular.woff2') format('woff2'),
+		url('#{$path-fonts}/FactorA/FactorAMedium-Regular.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Factor A';
+	src: local('Factor A Bold'), local('FactorA-Bold'),
+		url('#{$path-fonts}/FactorA/FactorA-Bold.woff2') format('woff2'),
+		url('#{$path-fonts}/FactorA/FactorA-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* MyriadPro */
+@font-face {
+	font-family: 'MyriadPro';
+	src: local('MyriadPro Regular'), local('MyriadPro-Regular'),
+		url('#{$path-fonts}/MyriadPro/MyriadPro-Regular.woff2') format('woff2'),
+		url('#{$path-fonts}/MyriadPro/MyriadPro-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
