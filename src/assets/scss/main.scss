@@ -1,6 +1,9 @@
 // swiper
 @import '~swiper/swiper-bundle.css';
 
+// fancybox
+@import '~@fancyapps/ui/dist/fancybox.css';
+
 @import "utils/vars";
 
 // Наш сайт
@@ -20,3 +23,5 @@
 @import "components/info-block";
 @import "components/advant-list";
 @import "components/steps-wrap";
+@import "components/form-site";
+@import "components/input-check";

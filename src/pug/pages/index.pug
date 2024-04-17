@@ -37,7 +37,7 @@ block content
 			.filter
 				.filter__label Выбери страну для кулинарного путешествия:
 
-				select(name='country')
+				select.js-choose-country(name='country')
 					option(value='france') Франция
 					option(value='italy') Италия
 					option(value='japan') Япония
@@ -50,19 +50,19 @@ block content
 					option(value='vietnam') Вьетнам
 
 			.category
-				.category__item
+				.category__item.js-category-item(data-type="salad")
 					.category__img
 						img(src="assets/img/salad.png", alt="")
 
 					.category__label Салаты
 
-				.category__item
+				.category__item.js-category-item(data-type="first")
 					.category__img
 						img(src="assets/img/soup.png", alt="")
 
 					.category__label Первые блюда
 
-				.category__item
+				.category__item.js-category-item(data-type="second")
 					.category__img
 						img(src="assets/img/pasta.png", alt="")
 
@@ -71,19 +71,22 @@ block content
 			.products-list
 				-
 					var list=[
-						{
-							img:'product1_1.jpg',
-							img2:'product1_2.jpg',
-							title:'ПалычЛанч-Итальянская паста Болоньезе',
-							country:'Италия',
-							country_code: 'italy'
-						},
+						//- {
+						//- 	img:'product1_1.jpg',
+						//- 	img2:'product1_2.jpg',
+						//- 	title:'ПалычЛанч-Итальянская паста Болоньезе',
+						//- 	country:'Италия',
+						//- 	country_code: 'italy',
+						//- 	type:'second'
+						//- },
 						{
 							img:'product1_1.jpg',
 							img2:'product1_2.jpg',
 							title:'ПалычЛанч Жульен с курин. филе и шампиньонами 0,12',
 							country:'Франция',
-							country_code: 'france'
+							country_code: 'france',
+							link:'#',
+							type:'second'
 						},
 						{
 							img:'product2_1.jpg',
@@ -91,7 +94,8 @@ block content
 							title:'ПалычЛанч Итал паста с мяс ас в слив соусе 0,21',
 							country:'Италия',
 							country_code: 'italy',
-							link: 'https://palich.ru/catalog/gotovye_blyuda/vtorye_blyuda/palychlanch_italyanskaya_pasta_s_myasnym_assorti_v_slivochnom_souse_210_g/'
+							link: 'https://palich.ru/catalog/gotovye_blyuda/vtorye_blyuda/palychlanch_italyanskaya_pasta_s_myasnym_assorti_v_slivochnom_souse_210_g/',
+							type:'second'
 						},
 						{
 							img:'product3_1.jpg',
@@ -99,7 +103,8 @@ block content
 							title:'ПалычЛанч Итал.паста Болоньезе 0,21',
 							country:'Италия',
 							country_code: 'italy',
-							link:'https://palich.ru/catalog/gotovye_blyuda/vtorye_blyuda/palychlanch_italyanskaya_pasta_boloneze_210_g/'
+							link:'https://palich.ru/catalog/gotovye_blyuda/vtorye_blyuda/palychlanch_italyanskaya_pasta_boloneze_210_g/',
+							type:'second'
 						},
 						{
 							img:'product4_1.jpg',
@@ -107,7 +112,8 @@ block content
 							title:'ПалычЛанч Итал.паста Карбонара 0,21',
 							country:'Италия',
 							country_code: 'italy',
-							link:'https://palich.ru/catalog/gotovye_blyuda/vtorye_blyuda/palychlanch_italyanskaya_pasta_karbonara_210_g/'
+							link:'https://palich.ru/catalog/gotovye_blyuda/vtorye_blyuda/palychlanch_italyanskaya_pasta_karbonara_210_g/',
+							type:'second'
 						},
 						{
 							img:'product5_1.jpg',
@@ -115,7 +121,8 @@ block content
 							title:'ПалычЛанч Итал.паста с курицей 0,21',
 							country:'Италия',
 							country_code: 'italy',
-							link:'https://palich.ru/catalog/gotovye_blyuda/vtorye_blyuda/palychlanch_italyanskaya_pasta_s_kuritsey_210_g/'
+							link:'https://palich.ru/catalog/gotovye_blyuda/vtorye_blyuda/palychlanch_italyanskaya_pasta_s_kuritsey_210_g/',
+							type:'second'
 						},
 						{
 							img:'product6_1.jpg',
@@ -123,7 +130,8 @@ block content
 							title:'ПалычЛанч Итал.паста с шампиньонами 0,21',
 							country:'Италия',
 							country_code: 'italy',
-							link:'https://palich.ru/catalog/gotovye_blyuda/vtorye_blyuda/palychlanch_italyanskaya_pasta_s_shampinonami_210_g/'
+							link:'https://palich.ru/catalog/gotovye_blyuda/vtorye_blyuda/palychlanch_italyanskaya_pasta_s_shampinonami_210_g/',
+							type:'second'
 						},
 						{
 							img:'product7_1.jpg',
@@ -131,7 +139,8 @@ block content
 							title:'ПалычЛанч Лапша Удон с курицей в соусе Терияки 0,22',
 							country:'Япония',
 							country_code: 'japan',
-							link:'https://palich.ru/catalog/gotovye_blyuda/vtorye_blyuda/palychlanch_lapsha_udon_s_kuritsey_v_souse_teriyaki_220_g/'
+							link:'https://palich.ru/catalog/gotovye_blyuda/vtorye_blyuda/palychlanch_lapsha_udon_s_kuritsey_v_souse_teriyaki_220_g/',
+							type:'second'
 						},
 						{
 							img:'product8_1.jpg',
@@ -139,7 +148,8 @@ block content
 							title:'ПалычЛанч Люля-кебаб из курицы с кускусом 0,245',
 							country:'Грузия',
 							country_code: 'georgia',
-							link:'https://palich.ru/catalog/gotovye_blyuda/vtorye_blyuda/palychlanch_lyulya_kebab_iz_kuritsy_s_kus_kusom_245_g/'
+							link:'https://palich.ru/catalog/gotovye_blyuda/vtorye_blyuda/palychlanch_lyulya_kebab_iz_kuritsy_s_kus_kusom_245_g/',
+							type:'second'
 						},
 						{
 							img:'product9_1.jpg',
@@ -147,7 +157,8 @@ block content
 							title:'ПалычЛанч Итал.паста Альфредо с куриц и гриб 0,22',
 							country:'Италия',
 							country_code: 'italy',
-							link:'https://palich.ru/catalog/gotovye_blyuda/vtorye_blyuda/palychlanch_italyanskaya_pasta_alfredo_s_kuritsey_i_gribami_220_g/'
+							link:'https://palich.ru/catalog/gotovye_blyuda/vtorye_blyuda/palychlanch_italyanskaya_pasta_alfredo_s_kuritsey_i_gribami_220_g/',
+							type:'second'
 						},
 						{
 							img:'product10_1.jpg',
@@ -155,7 +166,8 @@ block content
 							title:'ПалычЛанч Пик кур в соев соусе с рис лапшой 0,2',
 							country:'Таиланд',
 							country_code: 'thailand',
-							link:'https://palich.ru/catalog/gotovye_blyuda/vtorye_blyuda/palychlanch_pikantnaya_kuritsa_v_soevom_souse_s_risovoy_lapshoy_200_g/'
+							link:'https://palich.ru/catalog/gotovye_blyuda/vtorye_blyuda/palychlanch_pikantnaya_kuritsa_v_soevom_souse_s_risovoy_lapshoy_200_g/',
+							type:'second'
 						},
 						{
 							img:'product11_1.jpg',
@@ -163,7 +175,8 @@ block content
 							title:'ПалычЛанч Пикантная свин в соус Тер с кус-кус 0,21',
 							country:'Таиланд',
 							country_code: 'thailand',
-							link:'https://palich.ru/catalog/gotovye_blyuda/vtorye_blyuda/palychlanch_pikantnaya_svinina_v_souse_teriyaki_s_kus_kusom_210_g/'
+							link:'https://palich.ru/catalog/gotovye_blyuda/vtorye_blyuda/palychlanch_pikantnaya_svinina_v_souse_teriyaki_s_kus_kusom_210_g/',
+							type:'second'
 						},
 						{
 							img:'product12_1.jpg',
@@ -171,7 +184,8 @@ block content
 							title:'ПалычЛанч Соба с курицей 0,2',
 							country:'Япония',
 							country_code: 'japan',
-							link:'https://palich.ru/catalog/gotovye_blyuda/vtorye_blyuda/palychlanch_soba_s_kuritsey_200_g/'
+							link:'https://palich.ru/catalog/gotovye_blyuda/vtorye_blyuda/palychlanch_soba_s_kuritsey_200_g/',
+							type:'second'
 						},
 						{
 							img:'product13_1.jpg',
@@ -179,7 +193,8 @@ block content
 							title:'ПалычЛанч Соба с ОВОЩАМИ 0,2',
 							country:'Япония',
 							country_code: 'japan',
-							link:'https://palich.ru/catalog/gotovye_blyuda/vtorye_blyuda/palychlanch_soba_s_ovoshchami_200_g/'
+							link:'https://palich.ru/catalog/gotovye_blyuda/vtorye_blyuda/palychlanch_soba_s_ovoshchami_200_g/',
+							type:'second'
 						},
 						{
 							img:'product14_1.jpg',
@@ -187,7 +202,8 @@ block content
 							title:'ПалычЛанч Фрикасе из индейки с овощами и птитимом',
 							country:'Франция',
 							country_code: 'france',
-							link:'https://palich.ru/catalog/gotovye_blyuda/vtorye_blyuda/palychlanch_frikase_iz_indeyki_s_ovoshchami_i_ptitimom_220_g/'
+							link:'https://palich.ru/catalog/gotovye_blyuda/vtorye_blyuda/palychlanch_frikase_iz_indeyki_s_ovoshchami_i_ptitimom_220_g/',
+							type:'second'
 						},
 						{
 							img:'product15_1.jpg',
@@ -195,7 +211,8 @@ block content
 							title:'Поке с курицей 0,22',
 							country:'Гаваи',
 							country_code: 'hawaii',
-							link:'https://palich.ru/catalog/gotovye_blyuda/salaty_zakuski/poke_s_kuritsey_220_g/'
+							link:'https://palich.ru/catalog/gotovye_blyuda/salaty_zakuski/poke_s_kuritsey_220_g/',
+							type:'second'
 						},
 						{
 							img:'product16_1.jpg',
@@ -203,7 +220,8 @@ block content
 							title:'Поке с форелью 0,21',
 							country:'Гаваи',
 							country_code: 'hawaii',
-							link:'https://palich.ru/catalog/gotovye_blyuda/salaty_zakuski/poke_s_forelyu_210_g/'
+							link:'https://palich.ru/catalog/gotovye_blyuda/salaty_zakuski/poke_s_forelyu_210_g/',
+							type:'second'
 						},
 						{
 							img:'product17_1.jpg',
@@ -211,7 +229,8 @@ block content
 							title:'салат Греческий 0,18',
 							country:'Греция',
 							country_code: 'greece',
-							link:'https://palich.ru/catalog/gotovye_blyuda/salaty_zakuski/salat_grecheskiy_180_g/'
+							link:'https://palich.ru/catalog/gotovye_blyuda/salaty_zakuski/salat_grecheskiy_180_g/',
+							type:'salad'
 						},
 						{
 							img:'product18_1.jpg',
@@ -219,7 +238,8 @@ block content
 							title:'салат Нисуаз с тунцом 0,18',
 							country:'Франция',
 							country_code: 'france',
-							link:'https://palich.ru/catalog/gotovye_blyuda/salaty_zakuski/salat_nisuaz_s_tuntsom_180_g/'
+							link:'https://palich.ru/catalog/gotovye_blyuda/salaty_zakuski/salat_nisuaz_s_tuntsom_180_g/',
+							type:'salad'
 						},
 						{
 							img:'product19_1.jpg',
@@ -227,7 +247,8 @@ block content
 							title:'Салат Нью-Йорк с говядиной 0,18',
 							country:'Америка',
 							country_code: 'america',
-							link:'https://palich.ru/catalog/gotovye_blyuda/salaty_zakuski/salat_nyu_york_s_govyadinoy_180_g/'
+							link:'https://palich.ru/catalog/gotovye_blyuda/salaty_zakuski/salat_nyu_york_s_govyadinoy_180_g/',
+							type:'salad'
 						},
 						{
 							img:'product20_1.jpg',
@@ -235,7 +256,8 @@ block content
 							title:'Нью-Йорк с курицей 0,2',
 							country:'Америка',
 							country_code: 'america',
-							link:'https://palich.ru/catalog/gotovye_blyuda/salaty_zakuski/salat_nyu_york_s_kuritsey_200_g/'
+							link:'https://palich.ru/catalog/gotovye_blyuda/salaty_zakuski/salat_nyu_york_s_kuritsey_200_g/',
+							type:'salad'
 						},
 						{
 							img:'product21_1.jpg',
@@ -243,7 +265,8 @@ block content
 							title:'Цезарь с курицей 0,18',
 							country:'Америка',
 							country_code: 'america',
-							link:'https://palich.ru/catalog/gotovye_blyuda/salaty_zakuski/salat_tsezar_s_kuritsey_180_g/'
+							link:'https://palich.ru/catalog/gotovye_blyuda/salaty_zakuski/salat_tsezar_s_kuritsey_180_g/',
+							type:'salad'
 						},
 						{
 							img:'product22_1.jpg',
@@ -251,7 +274,8 @@ block content
 							title:'Цезарь с форелью 0,18',
 							country:'Америка',
 							country_code: 'america',
-							link:'https://palich.ru/catalog/gotovye_blyuda/salaty_zakuski/salat_tsezar_s_forelyu_180_g/'
+							link:'https://palich.ru/catalog/gotovye_blyuda/salaty_zakuski/salat_tsezar_s_forelyu_180_g/',
+							type:'salad'
 						},
 						{
 							img:'product23_1.jpg',
@@ -259,7 +283,8 @@ block content
 							title:'Лагман 0,3',
 							country:'Узбекистан',
 							country_code: 'uzbekistan',
-							link:'https://palich.ru/catalog/gotovye_blyuda/pervye_blyuda/lagman_300_g/'
+							link:'https://palich.ru/catalog/gotovye_blyuda/pervye_blyuda/lagman_300_g/',
+							type:'first'
 						},
 						{
 							img:'product24_1.jpg',
@@ -267,7 +292,8 @@ block content
 							title:'Суп Рамэн с курицей 0,3',
 							country:'Япония',
 							country_code: 'japan',
-							link:'https://palich.ru/catalog/gotovye_blyuda/pervye_blyuda/sup_ramen_300_g/'
+							link:'https://palich.ru/catalog/gotovye_blyuda/pervye_blyuda/sup_ramen_300_g/',
+							type:'first'
 						},
 						{
 							img:'product25_1.jpg',
@@ -275,7 +301,8 @@ block content
 							title:'Суп Том Ям с кальмаром 0,36',
 							country:'Таиланд',
 							country_code: 'thailand',
-							link:'https://palich.ru/catalog/gotovye_blyuda/pervye_blyuda/sup_tom_yam_s_kalmarom_360_g/'
+							link:'https://palich.ru/catalog/gotovye_blyuda/pervye_blyuda/sup_tom_yam_s_kalmarom_360_g/',
+							type:'first'
 						},
 						{
 							img:'product26_1.jpg',
@@ -283,7 +310,8 @@ block content
 							title:'Суп Том Ям с курицей 0,36',
 							country:'Таиланд',
 							country_code: 'thailand',
-							link:'https://palich.ru/catalog/gotovye_blyuda/pervye_blyuda/sup_tom_yam_s_kuritsey_360_g/'
+							link:'https://palich.ru/catalog/gotovye_blyuda/pervye_blyuda/sup_tom_yam_s_kuritsey_360_g/',
+							type:'first'
 						},
 						{
 							img:'product27_1.jpg',
@@ -291,7 +319,8 @@ block content
 							title:'Суп Фо Бо с говядиной 0,3',
 							country:'Вьетнам',
 							country_code: 'vietnam',
-							link:'https://palich.ru/catalog/gotovye_blyuda/pervye_blyuda/sup_fo_bo_s_govyadinoy_300_g/'
+							link:'https://palich.ru/catalog/gotovye_blyuda/pervye_blyuda/sup_fo_bo_s_govyadinoy_300_g/',
+							type:'first'
 						},
 						{
 							img:'product28_1.jpg',
@@ -299,24 +328,28 @@ block content
 							title:'Суп-харчо с говядиной 0,3',
 							country:'Грузия',
 							country_code: 'georgia',
-							link:'https://palich.ru/catalog/gotovye_blyuda/pervye_blyuda/sup_kharcho_s_govyadinoy_300_g/'
+							link:'https://palich.ru/catalog/gotovye_blyuda/pervye_blyuda/sup_kharcho_s_govyadinoy_300_g/',
+							type:'first'
 						},
 					]
 				each item in list
-					.product-item
+					.product-item.js-product-item(data-country=item.country_code, data-type=item.type)
 						.product-item__slider
 							.swiper.product-slider.js-product-slider
 								.swiper-wrapper
 									.swiper-slide.product-slider__item
-										img(src="assets/img/"+item.img, alt="")
+										a(href=item.link)
+											img(src="assets/img/"+item.img, alt="")
 
 									.swiper-slide.product-slider__item
-										img(src="assets/img/"+item.img2, alt="")
+										a(href=item.link)
+											img(src="assets/img/"+item.img2, alt="")
 									
 									.swiper-pagination.js-product-slider-pager
 
 						.product-item__content
-							.product-item__title= item.title
+							.product-item__title
+								a(href=item.link)= item.title
 							.product-item__country= item.country
 
 	section.info-block

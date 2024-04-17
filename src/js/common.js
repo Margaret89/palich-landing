@@ -1,5 +1,8 @@
 import $ from 'jquery';
 import Swiper from 'swiper/swiper-bundle.esm.browser.min.js';
-window.Swiper = Swiper;
+import { Fancybox } from "@fancyapps/ui";
 
-export {$, Swiper};
+window.Swiper = Swiper;
+window.Fancybox = Fancybox;
+
+export {$, Fancybox, Swiper};

@@ -38,3 +38,43 @@
 	&__link{cursor: pointer;}
 	&__link:hover{color: var(--color-secondary-hover);}
 }
+
+@media (max-width: 991px) {
+	.header{
+		&__content{
+			width: 70%;
+			justify-content: flex-start;
+		}
+	}
+
+	.main-menu{gap: 20px;}
+}
+
+@media (max-width: 767px) {
+	.header{
+		&__content{
+			width: 100%;
+			position: relative;
+			padding-left: 10px;
+		}
+	}
+
+	.main-menu{
+		display: none;
+		background: #fff;
+		border-radius: 8px;
+		position: absolute;
+		top: 25px;
+		left: 50px;
+		padding: 10px 0;
+
+		&__item{width: 100%;}
+
+		&__link{
+			display: block;
+			padding: 10px 20px;
+		}
+
+		&.open{display: block;}
+	}
+}

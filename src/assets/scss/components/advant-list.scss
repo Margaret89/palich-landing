@@ -18,6 +18,7 @@
 		background: url(/assets/img/frame.svg) no-repeat center;
 		background-size: contain;
 		padding-right: 35px;
+		margin-left: 20px;
 		padding-bottom: 8px;
 	}
 
@@ -25,5 +26,40 @@
 		@include font(none, none, 1.8rem, 1.33, none);
 		text-transform: uppercase;
 		margin-top: 20px;
+	}
+}
+
+@media (max-width: 1199px) {
+	.advant-item{
+		&__icon{
+			width: 200px;
+  			height: 184px;
+
+			img{max-width: 60%;}
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.advant-item{width: calc(50% - 34px);}
+}
+
+@media (max-width: 767px) {
+	.advant-wrap{
+		position: relative;
+		z-index: 2;
+	}
+
+	.advant-list{gap: 30px;}
+
+	.advant-item{
+		width: calc(50% - 15px);
+		&__label{font-size: 1rem;}
+
+		&__icon{
+			width: 150px;
+  			height: 138px;
+			margin-left: 15px;
+		}
 	}
 }

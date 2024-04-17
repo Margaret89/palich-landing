@@ -1,9 +1,11 @@
 /*-------------- steps-wrap -----------------*/
 .steps-wrap{
+	margin-top: 100px;
+
 	&__title{
 		@include font(none, 500, 3.2rem, 1.2, var(--color-primary));
 		text-align: center;
-		margin-bottom: 30px;
+		margin-bottom: 90px;
 	}
 }
 
@@ -16,6 +18,23 @@
 .step-item{
 	width: calc(33.33% - 20px);
 	position: relative;
+
+	&:first-child .step-num{
+		right: auto;
+		left: 30px;
+	}
+
+	&:not(:last-child):after{
+		content: '';
+		display: block;
+		width: 254px;
+		height: 144px;
+		background: url(/assets/img/path6.svg) no-repeat center;
+		background-size: contain;
+		position: absolute;
+		bottom: -12px;
+		left: 67%;
+	}
 }
 
 .step-num{
@@ -31,22 +50,44 @@
 	color: #fff;
 	position: absolute;
 	top: 0;
-	right: 30px;
+	right: 76px;
 
 	&::before{
 		content: '';
 		display: block;
 		width: 98px;
-		width: 86px;
+		height: 86px;
 		background: url(/assets/img/frame-small.svg) no-repeat center;
 		background-size: contain;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-42%, -50%);
 	}
 
-	&__val{font-size: 3.2rem;}
-	&__label{font-size: 2.4rem;}
+	&__val{
+		font-size: 3.2rem;
+		position: relative;
+	}
 
-	&:first-child{
-		right: auto;
-		left: 30px;
+	&__label{
+		font-size: 2.4rem;
+		position: relative;
+	}
+}
+
+@media (max-width: 767px) {
+	.steps-wrap{
+		&__title{
+			font-size: 2.4rem;
+			margin-bottom: 30px;
+		}
+	}
+
+	.steps-list{flex-direction: column;}
+
+	.step-item{
+		width: 100%;
+		&::after{display: none;}
 	}
 }

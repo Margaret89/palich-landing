@@ -23,8 +23,71 @@ footer.footer
 				.footer__shop
 					a(href="https://palich.ru/") Интернет-магазин
 
-				a(href="#").btn-white Обратная связь
+				a(href="#", data-fancybox="", data-src="#callback").btn-white Обратная связь
 
 				.footer__copyright Правообладателем ТМ «У Палыча» является ООО «Самарский Трактир». 
 					br
 					|ИНН 6315502936 | ОГРН 1026300960817
+
+#callback(style='display: none;')
+	.popup-form
+		.js-valid-form
+			form.form-site
+				.form-site__title Заказать обратный звонок
+				
+				.form-site__content
+					.form-site__item.js-form-site-item
+						.form-site__label Тема
+
+						.form-site__field
+							select(name='theme' required='')
+								option(value='') Выберите тему
+								option(value='Заказать торт') Заказать торт
+								option.js-depend-option(value='Заполнить заявку на приобретение франшизы' data-depend='city') Заполнить заявку на приобретение франшизы
+								option(value='Предложить сотрудничество') Предложить сотрудничество
+								option(value='Отправить нам свои предложения и пожелания') Отправить нам свои предложения и пожелания
+								option.js-depend-option(value='Отправить нам отзыв на качество продукции и/или обслуживания' data-depend='review') Отправить нам отзыв на качество продукции и/или обслуживания
+								option(value='Другое') Другое
+
+
+					.form-site__item.js-form-site-item
+						.form-site__label Ваше имя
+
+						.form-site__field
+							input(type="text", name="name")
+
+					.form-site__item.js-form-site-item
+						.form-site__label E-mail
+
+						.form-site__field
+							input(type="email", name="email")
+
+					.form-site__item.js-form-site-item
+						.form-site__label Телефон
+
+						.form-site__field
+							input(type="text", name="tel")
+
+					.form-site__item.js-form-site-item
+						.form-site__label Комментарий
+
+						.form-site__field
+							textarea(name="comment", required="")
+
+					.form-site__item.js-form-site-item
+						.form-site__label Выбрать изображения
+
+						.form-site__field
+							input(accept='image/*' type='file' name='file[]' multiple='multiple')
+
+				
+				.form-site__polit.js-form-site-polit
+					label.input-check
+						input(type='checkbox', required="required")
+						span.input-check__mark
+						span.input-check__text Отправляя форму, я даю 
+							a(href="https://palich.ru/usloviya-i-soglasheniya/") согласие на обработку персональных данных
+
+				.form-site__btn
+					button(type="submit").btn.js-btn-submit
+						span Отправить заявку

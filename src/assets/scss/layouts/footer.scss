@@ -1,13 +1,31 @@
 .footer{
 	background: var(--color-primary);
 	color: #fff;
-	padding: 30px 0 120px;
+	padding: 34px 0 120px;
+	position: relative;
+
+	&::after{
+		content: '';
+		display: inline-block;
+		width: 599px;
+		height: 695px;
+		background: url(/assets/img/path.svg) no-repeat center;
+		background-size: contain;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+
+	.st-width{
+		position: relative;
+		z-index: 2;
+	}
 
 	&__content{
 		display: flex;
 		justify-content: center;
-		gap: 110px;
-		padding-left: 100px;
+		gap: 84px;
+		padding-left: 162px;
 		padding-right: 100px;
 		position: relative;
 
@@ -19,20 +37,8 @@
 			background: url(/assets/img/sphere.svg) no-repeat center;
 			background-size: contain;
 			position: absolute;
-			bottom: 20px;
-			left: 20px;
-		}
-
-		&::after{
-			content: '';
-			display: inline-block;
-			width: 423px;
-			height: 536px;
-			background: url(/assets/img/path.svg) no-repeat center;
-			background-size: contain;
-			position: absolute;
-			right: 0;
-			bottom: 0;
+			bottom: -71px;
+			left: 40px;
 		}
 	}
 
@@ -41,19 +47,20 @@
 
 		.btn-white{
 			width: 100%;
-			margin-top: 10px;
+			margin-top: 24px;
 		}
 	}
 
 	&__shop{
 		@include font(none, none, 2.4rem, 1.2, none);
+		text-transform: uppercase;
 
 		a{color: #fff;}
 	}
 
 	&__copyright{
-		@include font(none, bold, 2rem, 1, none);
-		margin-top: 20px;
+		@include font(none, bold, 2rem, 1.1, none);
+		margin-top: 28px;
 	}
 }
 
@@ -61,13 +68,58 @@
 	&__item:not(:last-child){margin-bottom: 30px;}
 
 	&__val{
-		@include font(none, bold, 13.2rem, 1.2, none);
+		@include font(none, bold, 3.2rem, 1.2, none);
 
-		a{color: #fff}
+		a{
+			color: #fff;
+			text-decoration: none;
+		}
 	}
 
 	&__label{
 		@include font(none, bold, 2rem, 1.2, none);
 		margin-top: 2px;
+	}
+}
+
+@media (max-width: 991px) {
+	.footer{
+		&::after{display: none;}
+		&__content::before{bottom: -185px;}
+
+		&__content{
+			gap: 30px;
+			padding: 0;
+		}
+
+		&__info{width: 320px;}
+	}
+
+	.footer-contacts{
+		&__val{font-size: 2.8rem;}
+	}
+}
+
+@media (max-width: 767px) {
+	.footer{
+		text-align: center;
+
+		&__content{
+			flex-direction: column;
+			gap: 45px;
+		}
+
+		&__info{
+			.btn-white{margin-top: 50px;}
+		}
+
+		&__copyright{
+			font-size: 1.4rem;
+			margin-top: 18px;
+		}
+	}
+
+	.footer-contacts{
+		&__label{font-size: 1.6rem;}
 	}
 }

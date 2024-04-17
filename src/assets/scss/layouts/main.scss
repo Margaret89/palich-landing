@@ -7,6 +7,7 @@
 	--color-secondary: #0072BC;
 	--color-secondary-hover: #035a94;
 	--color-text: #000;
+	--color-danger: #ff0000;
 }
 
 html,
@@ -93,6 +94,7 @@ main{
 
 .st-width{
 	width: 1300px;
+	max-width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: 15px;
@@ -139,8 +141,8 @@ button.btn{
 }
 
 .btn-white,
-input[type="submit"].btn,
-button.btn{
+input[type="submit"].btn-white,
+button.btn-white{
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -155,6 +157,7 @@ button.btn{
 	text-align: center;
 	cursor: pointer;
 	text-decoration: none;
+	transition: all 0.2s ease 0s;
 
 	.icon{
 		flex-shrink: 0;
@@ -166,5 +169,14 @@ button.btn{
 		color: #fff;
 
 		.icon{fill: #fff;}
+	}
+}
+
+@media (max-width: 767px) {
+	.btn-white,
+	input[type="submit"].btn-white,
+	button.btn-white{
+		height: 7.4rem;
+		font-size: 2rem;
 	}
 }
