@@ -1,0 +1,73 @@
+.footer{
+	background: var(--color-primary);
+	color: #fff;
+	padding: 30px 0 120px;
+
+	&__content{
+		display: flex;
+		justify-content: center;
+		gap: 110px;
+		padding-left: 100px;
+		padding-right: 100px;
+		position: relative;
+
+		&::before{
+			content: '';
+			display: inline-block;
+			width: 130px;
+			height: 134px;
+			background: url(/assets/img/sphere.svg) no-repeat center;
+			background-size: contain;
+			position: absolute;
+			bottom: 20px;
+			left: 20px;
+		}
+
+		&::after{
+			content: '';
+			display: inline-block;
+			width: 423px;
+			height: 536px;
+			background: url(/assets/img/path.svg) no-repeat center;
+			background-size: contain;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+	}
+
+	&__info{
+		max-width: 406px;
+
+		.btn-white{
+			width: 100%;
+			margin-top: 10px;
+		}
+	}
+
+	&__shop{
+		@include font(none, none, 2.4rem, 1.2, none);
+
+		a{color: #fff;}
+	}
+
+	&__copyright{
+		@include font(none, bold, 2rem, 1, none);
+		margin-top: 20px;
+	}
+}
+
+.footer-contacts{
+	&__item:not(:last-child){margin-bottom: 30px;}
+
+	&__val{
+		@include font(none, bold, 13.2rem, 1.2, none);
+
+		a{color: #fff}
+	}
+
+	&__label{
+		@include font(none, bold, 2rem, 1.2, none);
+		margin-top: 2px;
+	}
+}

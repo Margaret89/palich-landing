@@ -1,5 +1,5 @@
-// fancybox
-// @import '~@fancyapps/fancybox/dist/jquery.fancybox.css';
+// swiper
+@import '~swiper/swiper-bundle.css';
 
 @import "utils/vars";
 
@@ -13,3 +13,10 @@
 @import "layouts/header";
 @import "layouts/footer";
 @import "components/icons";
+@import "components/hamburger";
+@import "components/top-block";
+@import "components/products";
+@import "components/select";
+@import "components/info-block";
+@import "components/advant-list";
+@import "components/steps-wrap";

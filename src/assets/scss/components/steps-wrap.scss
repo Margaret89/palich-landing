@@ -1,0 +1,52 @@
+/*-------------- steps-wrap -----------------*/
+.steps-wrap{
+	&__title{
+		@include font(none, 500, 3.2rem, 1.2, var(--color-primary));
+		text-align: center;
+		margin-bottom: 30px;
+	}
+}
+
+.steps-list{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+}
+
+.step-item{
+	width: calc(33.33% - 20px);
+	position: relative;
+}
+
+.step-num{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 5px;
+	width: 85px;
+	height: 85px;
+	font-weight: 500;
+	line-height: 1;
+	color: #fff;
+	position: absolute;
+	top: 0;
+	right: 30px;
+
+	&::before{
+		content: '';
+		display: block;
+		width: 98px;
+		width: 86px;
+		background: url(/assets/img/frame-small.svg) no-repeat center;
+		background-size: contain;
+	}
+
+	&__val{font-size: 3.2rem;}
+	&__label{font-size: 2.4rem;}
+
+	&:first-child{
+		right: auto;
+		left: 30px;
+	}
+}

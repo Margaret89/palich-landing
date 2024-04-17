@@ -32,6 +32,8 @@ block content
 				br
 				|Эксклюзивные разработки блюд от Бренд-шефа, с сохранением уникального и неповторимого вкуса!
 
+			
+			.js-to-move(data-move="products")
 			.filter
 				.filter__label Выбери страну для кулинарного путешествия:
 
@@ -56,13 +58,13 @@ block content
 
 				.category__item
 					.category__img
-						img(src="assets/img/salad.png", alt="")
+						img(src="assets/img/soup.png", alt="")
 
 					.category__label Первые блюда
 
 				.category__item
 					.category__img
-						img(src="assets/img/salad.png", alt="")
+						img(src="assets/img/pasta.png", alt="")
 
 					.category__label Вторые блюда
 
@@ -311,10 +313,11 @@ block content
 									.swiper-slide.product-slider__item
 										img(src="assets/img/"+item.img2, alt="")
 									
-								.swiper-pagination.js-product-slider-pager
+									.swiper-pagination.js-product-slider-pager
 
-						.product-item__title= item.title
-						.product-item__country= item.country
+						.product-item__content
+							.product-item__title= item.title
+							.product-item__country= item.country
 
 	section.info-block
 		.st-width
@@ -323,7 +326,8 @@ block content
 					img(src="assets/img/plate2.png", alt="")
 
 				.info-block__info
-					.info-block__desc <b>Для того, чтобы быстрее найти такие блюда среди многочисленного ассортимента</b> (у ТМ "У Палыча" более 150 видов готовых блюд), <b>мы пометили их эмблемой</b> 
+					.info-block__desc <b>Для того, чтобы быстрее найти такие блюда среди многочисленного ассортимента</b> (у ТМ "У Палыча" более 150 видов готовых блюд), <b>мы пометили их эмблемой</b>
+						br
 						span.text-accent "КУХНИ МИРА".
 
 					a(href="https://palich.ru/").btn <u>найти блюда на сайте</u>

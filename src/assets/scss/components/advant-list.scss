@@ -1,0 +1,29 @@
+/*-------------- advant-list -----------------*/
+.advant-list{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 68px;
+}
+
+.advant-item{
+	width: calc(25% - 51px);
+	text-align: center;
+
+	&__icon{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 255px;
+		height: 235px;
+		background: url(/assets/img/frame.svg) no-repeat center;
+		background-size: contain;
+		padding-right: 35px;
+		padding-bottom: 8px;
+	}
+
+	&__label{
+		@include font(none, none, 1.8rem, 1.33, none);
+		text-transform: uppercase;
+		margin-top: 20px;
+	}
+}

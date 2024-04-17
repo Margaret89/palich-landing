@@ -1,11 +1,11 @@
 header.header
 	.st-width
-		span.ic-hamburger
-			span
+		.header__content
+			span.ic-hamburger
+				span
 
-		ul.main-menu
-			li.main-menu__item
-				a(href="#menu").main-menu__link Каталог блюд
-				a(href="https://palich.ru/").main-menu__link Интернет-магазин
-
-	
+			ul.main-menu
+				li.main-menu__item
+					span(data-move="products").main-menu__link.js-link-move Каталог блюд
+				li.main-menu__item
+					a(href="https://palich.ru/").main-menu__link Интернет-магазин

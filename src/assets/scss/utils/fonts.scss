@@ -49,3 +49,22 @@
 	font-style: normal;
 	font-display: swap;
 }
+
+@font-face {
+	font-family: 'MyriadPro';
+	src: local('MyriadPro Semibold'), local('MyriadPro-Semibold'),
+		url('#{$path-fonts}/MyriadPro/MyriadPro-Semibold.woff2') format('woff2'),
+		url('#{$path-fonts}/MyriadPro/MyriadPro-Semibold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'MyriadPro';
+	src: local('MyriadPro SemiboldIt'), local('MyriadPro-SemiboldIt'),
+		url('../fonts/MyriadPro/MyriadPro-SemiboldIt.woff2') format('woff2'),
+		url('../fonts/MyriadPro/MyriadPro-SemiboldIt.woff') format('woff');
+	font-weight: 600;
+	font-style: italic;
+	font-display: swap;
+}
