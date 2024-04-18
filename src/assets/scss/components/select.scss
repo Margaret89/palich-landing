@@ -16,4 +16,83 @@ select{
 	-webkit-appearance: none;
 	appearance: none;
 	cursor: pointer;
+
+	option{
+		display: flex;
+		font-size: 1.4rem;
+		line-height: 3;
+		padding: 5px 10px;
+		text-align: left;
+		text-transform: none;
+	}
+}
+
+.select2{
+	width: 345px!important;
+	flex-shrink: 0;
+}
+
+.select2-container .select2-selection--single{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 5rem;
+	border: none;
+	border-radius: 0;
+	@include font(none, 500, 2rem, 1, #949191);
+	text-transform: uppercase;
+	text-align: center;
+	position: relative;
+	background: #F6F6F6;
+	border-radius: 2.5rem;
+	padding: 0 50px 0 20px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+	@include font(none, 500, 2rem, 1, #949191);
+	text-align: center;
+	text-transform: uppercase;
+	padding: 0;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+	display: inline-block;
+	width: 60px;
+	height: 100%;
+	background: transparent;
+	background: url(../img/arrow-down.png) no-repeat center;
+	transition: transform 0.2s ease 0s;
+}
+
+.select2-container--open .select2-dropdown--below{top: -1px;}
+.select2-container--default .select2-selection--single .select2-selection__arrow b{display: none;}
+.select2-container--default.select2-container--open  .select2-selection--single .select2-selection__arrow{transform: rotate(180deg);}
+
+.select2-dropdown{
+	min-width: 345px;
+	background: #fff;
+	border: 1px solid #aaa;
+	border-radius: 0;
+	padding: 0;
+	font-size: 1.6rem;
+	font-weight: 300;
+	line-height: 1.2;
+	color: var(--color-text);
+	box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.05), 0px 10px 23px 0px rgba(0, 0, 0, 0.05), 0px 41px 41px 0px rgba(0, 0, 0, 0.04), 0px 93px 56px 0px rgba(0, 0, 0, 0.03), 0px 165px 66px 0px rgba(0, 0, 0, 0.01), 0px 258px 72px 0px rgba(0, 0, 0, 0.00);
+}
+
+.select2-container--default .select2-results > .select2-results__options{max-height: 500px;}
+.select2-container--open .select2-dropdown--below{border: 1px solid #aaa;}
+
+.select2-container--default .select2-results__option{
+	padding: 10px;
+	list-style: none;
+}
+
+.select2-container--default .select2-results__option::before{display: none;}
+
+.select2-container--default .select2-results__option[aria-selected=true],
+.select2-container--default .select2-results__option--highlighted[aria-selected]{
+	background: rgba(0,0,0,0.05);
+	color: var(--color-primary);
 }

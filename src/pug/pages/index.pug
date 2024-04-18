@@ -21,7 +21,7 @@ block content
 					.top-block__label Совершайте Кулинарное путешествие с&nbsp;готовыми блюдами ТМ «У Палыча»!
 
 
-			.btn-mouse
+			.btn-mouse(data-move="products").js-link-move
 				img(src="assets/img/mouse.svg", alt="")
 
 
@@ -37,7 +37,8 @@ block content
 			.filter
 				.filter__label Выбери страну для кулинарного путешествия:
 
-				select.js-choose-country(name='country')
+				select.js-select.js-choose-country(name='country')
+					option(value='all') Выберите страну
 					option(value='france') Франция
 					option(value='italy') Италия
 					option(value='japan') Япония
@@ -345,7 +346,7 @@ block content
 										a(href=item.link)
 											img(src="assets/img/"+item.img2, alt="")
 									
-									.swiper-pagination.js-product-slider-pager
+								.swiper-pagination.js-product-slider-pager
 
 						.product-item__content
 							.product-item__title
