@@ -130,3 +130,14 @@
 		text-align: left;
 	}
 }
+
+@media (max-width: 767px) {
+	.form-site{
+		&__item{
+			flex-direction: column;
+			gap: 3px;
+		}
+
+		&__label{width: 100%;}
+	}
+}

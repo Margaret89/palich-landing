@@ -172,11 +172,19 @@ button.btn-white{
 	}
 }
 
+.fancybox{
+	&__content{max-width: 100%;}
+}
+
 @media (max-width: 767px) {
 	.btn-white,
 	input[type="submit"].btn-white,
 	button.btn-white{
 		height: 7.4rem;
 		font-size: 2rem;
+	}
+
+	.fancybox{
+		&__content{padding: 20px 15px;}
 	}
 }

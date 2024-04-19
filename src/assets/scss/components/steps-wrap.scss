@@ -77,17 +77,19 @@
 }
 
 @media (max-width: 767px) {
-	.steps-wrap{
-		&__title{
-			font-size: 2.4rem;
-			margin-bottom: 30px;
-		}
-	}
+	.steps-wrap{display: none;}
+	
+	// .steps-wrap{
+	// 	&__title{
+	// 		font-size: 2.4rem;
+	// 		margin-bottom: 30px;
+	// 	}
+	// }
 
-	.steps-list{flex-direction: column;}
+	// .steps-list{flex-direction: column;}
 
-	.step-item{
-		width: 100%;
-		&::after{display: none;}
-	}
+	// .step-item{
+	// 	width: 100%;
+	// 	&::after{display: none;}
+	// }
 }
